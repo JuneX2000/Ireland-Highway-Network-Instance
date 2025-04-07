@@ -1,4 +1,4 @@
-# The Test Instance of Irish Highway Network For Charging Station Location Problems
+# The Test Instances For Charging Station Location Problems
 
 This repository contains datasets of test instances of the 25-node network by Simchi-Levi & Berman (1988) and our constructed Irish highway network developed for electric vehicle (EV) charging station location Problems (CSLP) studies.
 
