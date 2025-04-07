@@ -50,6 +50,8 @@ The distance required to travel from the origin to the destination.
 ### 3. `Traffic_Flow.csv`
 
 This CSV file contains the estimated traffic volumes between selected origin-destination (O-D) node pairs in the network.
+
+#### Key Features:
 The label of each row represents the origin node index, and label of each column corresponds to destination node index. The value at each cell `(i, j)` indicates the traffic flow volume from node `i` to node `j`.
 
 **Note:** This matrix may be symmetric or asymmetric depending on the method of traffic estimation.
@@ -61,7 +63,6 @@ This pdf file provides a visual representation of the network instance, serves a
 **Nodes** are plotted based on their geographic coordinates (latitude & longitude).
 - In the representation of the Irish highway network, round nodes represent "centers", which serve as demand generators and attractors. Triangle nodes represent highway "connections" (e.g., junctions and intersections).
 - In the 25-node network, The size of nodes are propotional to the population weights assigned to each node.
-
 **Edges** represent undirect connections between nodes.
 
 
@@ -76,7 +77,7 @@ This Python script is used to build the graph-based structure for each test inst
   - Keys are indices of neighboring nodes
   - Values are edge lengths
 
-**Import the traffic flow data from `Traffic_Flow.csv` files**
+**Imports the traffic flow data from `Traffic_Flow.csv` files**
 
 
 ## References:
