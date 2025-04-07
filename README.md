@@ -61,6 +61,7 @@ This pdf file provides a visual representation of the network instance, serves a
 **Nodes** are plotted based on their geographic coordinates (latitude & longitude).
 - In the representation of the Irish highway network, round nodes represent "centers", which serve as demand generators and attractors. Triangle nodes represent highway "connections" (e.g., junctions and intersections).
 - In the 25-node network, The size of nodes are propotional to the population weights assigned to each node.
+
 **Edges** represent undirect connections between nodes.
 
 
@@ -74,6 +75,7 @@ This Python script is used to build the graph-based structure for each test inst
 - Each **value** is another dictionary containing:
   - Keys are indices of neighboring nodes
   - Values are edge lengths
+
 **Import the traffic flow data from `Traffic_Flow.csv` files**
 
 
