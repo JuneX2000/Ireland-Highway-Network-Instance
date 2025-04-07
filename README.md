@@ -10,6 +10,7 @@ This repository contains datasets of test instances of the 25-node network by Si
 For each instance, the repository includes:
   `Nodes.csv`: Data of nodes.
   `Edges.csv`: Data of edges representing links between nodes.
+  `Traffic_Flow.csv`: EV Traffic flow volumes in Origin-Destination matrix.
   `Network_Visualisation.pdf`: A graphical visualization of the network instance.
   `Network_Import.py`: A Python script to import the graph-based structure for further analysis or optimization.
 
@@ -38,6 +39,7 @@ The functional category of the node. For example:
 
    
 ### 2. `Edges.csv`
+
 #### 2.1 `Origin` : `<integer>`
 The index of starting node of the edge in the graph.
 #### 2.2 `Destination` : `<integer>`
@@ -45,13 +47,35 @@ The index of ending node of the edge.
 #### 2.3 `Edge Length` : `<real>`
 The distance required to travel from the origin to the destination.
 
+### 3. `Traffic_Flow.csv`
+
+This CSV file contains the estimated traffic volumes between selected origin-destination (O-D) node pairs in the network.
+The label of each row represents the origin node index, and label of each column corresponds to destination node index. The value at each cell `(i, j)` indicates the traffic flow volume from node `i` to node `j`.
+
+**Note:** This matrix may be symmetric or asymmetric depending on the method of traffic estimation.
+
+### 4. `Network_Visualisation.pdf`
+
+This pdf file provides a visual representation of the network instance, serves as a quick and intuitive reference for the topology, geographic spread, and structure of the instance.
+
+**Nodes** are plotted based on their geographic coordinates (latitude & longitude).
+- In the representation of the Irish highway network, round nodes represent "centers", which serve as demand generators and attractors. Triangle nodes represent highway "connections" (e.g., junctions and intersections).
+- In the 25-node network, The size of nodes are propotional to the population weights assigned to each node.
+**Edges** represent undirect connections between nodes.
 
 
+### 5. `Network_Import.py`
 
-- `nodes.csv`: Node data including GIS coordinates, classification (e.g. city, town, junction), and population.
-- `edges.csv`: Edge data representing links between nodes, including corresponding distances.
-- `network_visualisation.png`: A graphical visualization of the constructed highway network.
-- `import_network.py`: A Python script to import the dataset into a graph-based structure for further analysis or optimization.
+This Python script is used to build the graph-based structure for each test instance and import the traffic flow data file into constructed network structure.
+#### Key Features:
+
+**Creates a dictionary-based adjacency list** :
+- Each **key** represents a node (as a string).
+- Each **value** is another dictionary containing:
+  - Keys are indices of neighboring nodes
+  - Values are edge lengths
+**Import the traffic flow data from `Traffic_Flow.csv` files**
+
 
 ## References:
 1. Simchi-Levi, D., & Berman, O. (1988). A Heuristic Algorithm for the Traveling Salesman Location Problem on Networks. Operations Research, 36(3), 478–484. http://www.jstor.org/stable/170990
