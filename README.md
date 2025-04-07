@@ -30,17 +30,19 @@ The name of the town or city close to the node.
 The population represents the number of residents in the settlement, used to determine the classification of the node.
 A alternative representation is the assigned population weight, commonly used to estimate potential EV demand or origin-destination weights.
 #### 1.7 `Classification` : `<string>`  
-    The functional category of the node, such as "Center" that can generate and attract traveling demands or "Connection" that serves as intersections and junctions in the instance.
+The functional category of the node. For example:
+- `"Center"` – nodes that can generate and attract significant travel demand (e.g., cities or towns).  
+- `"Connection"` – nodes that serve as intersections or highway junctions.
     
 **Note:** Columns with missing data are not included in the dataset
 
    
 ### 2. `Edges.csv`
-#### 2.1 Origin: <integer>
+#### 2.1 `Origin` : `<integer>`
 The index of starting node of the edge in the graph.
-#### 2.2 Destination: <integer>
+#### 2.2 `Destination` : `<integer>`
 The index of ending node of the edge.
-#### 2.3 Edge Length: <real>
+#### 2.3 `Edge Length` : `<real>`
 The distance required to travel from the origin to the destination.
 
 
