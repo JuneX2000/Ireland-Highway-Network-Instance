@@ -69,7 +69,6 @@ This pdf file provides a visual representation of the network instance, serves a
 ### 5. `Network_Import.py`
 
 This Python script is used to build the graph-based structure for each test instance and import the traffic flow data file into constructed network structure.
-#### Key Features:
 
 **Creates a dictionary-based adjacency list** :
 - Each **key** represents a node (as a string).
