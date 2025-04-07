@@ -16,26 +16,25 @@ For each instance, the repository includes:
 ## The file format
 
 ### 1. `Nodes.csv`
-#### 1.1 Node: <integer>
+#### 1.1 `Node` : `<integer>` 
 The index for each node in the network.
-#### 1.2 Latitude: <string>
+#### 1.2 `Latitude` : `<string>`  
 Latitude of the node in degrees, minutes, and seconds format.
-#### 1.3 Longitude: <string>
+#### 1.3 `Longitude` : `<string>`
 Longitude of the node in degrees, minutes, and seconds format.
-#### 1.4 Degree: <integer>
+#### 1.4 `Degree` : `<integer>`
 The number of edges the node has in the network.
-#### 1.5 Settlement: <string>
+#### 1.5 `Settlement` : `<string>`  
 The name of the town or city close to the node.
-#### 1.6 Population/Population weight: <integer>
+#### 1.6 `Population` / `Population Weight` : `<integer>` 
 The population represents the number of residents in the settlement, used to determine the classification of the node.
 A alternative representation is the assigned population weight, commonly used to estimate potential EV demand or origin-destination weights.
-#### 1.7 Classfication: <string>
+#### 1.7 `Classification` : `<string>`  
     The functional category of the node, such as "Center" that can generate and attract traveling demands or "Connection" that serves as intersections and junctions in the instance.
     
-#### Note: Columns with missing data are not included in the dataset
+**Note:** Columns with missing data are not included in the dataset
 
    
-
 ### 2. `Edges.csv`
 #### 2.1 Origin: <integer>
 The index of starting node of the edge in the graph.
