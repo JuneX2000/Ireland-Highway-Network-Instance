@@ -77,7 +77,7 @@ This Python script is used to build the graph-based structure for each test inst
   - Keys are indices of neighboring nodes
   - Values are edge lengths
 
-**Importing the traffic flow data from `Traffic_Flow.csv` files.**
+**Import the traffic flow data from `Traffic_Flow.csv` files.**
 
 
 ## References:
