@@ -60,10 +60,10 @@ The label of each row represents the origin node index, and label of each column
 
 This pdf file provides a visual representation of the network instance, serves as a quick and intuitive reference for the topology, geographic spread, and structure of the instance.
 
-#### 4.1 Nodes are plotted based on their geographic coordinates (latitude & longitude).
+#### 4.1  Nodes are plotted based on their geographic coordinates (latitude & longitude).
 - In the representation of the Irish highway network, round nodes represent "centers", which serve as demand generators and attractors. Triangle nodes represent highway "connections" (e.g., junctions and intersections).
 - In the 25-node network, The size of nodes are propotional to the population weights assigned to each node.
-#### 4.2 Edges represent undirect connections between nodes.
+#### 4.2  Edges represent undirect connections between nodes.
 
 
 ### 5. `Network_Import.py`
