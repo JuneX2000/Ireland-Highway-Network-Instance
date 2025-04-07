@@ -71,13 +71,14 @@ The edges represent undirect connections between nodes.
 
 This Python script is used to build the graph-based structure for each test instance and import the traffic flow data file into constructed network structure.
 
-**Create a dictionary-based adjacency list:**
+**It include the instructions:**
+Creating a dictionary-based adjacency list:
 - Each **key** represents a node (as a string).
 - Each **value** is another dictionary containing:
   - Keys are indices of neighboring nodes
   - Values are edge lengths
 
-**Import the traffic flow data from `Traffic_Flow.csv` files.**
+Importing the traffic flow data from `Traffic_Flow.csv` files.
 
 
 ## References:
