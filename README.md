@@ -1,31 +1,48 @@
 # The Test Instance of Irish Highway Network For Charging Station Location Problems
 
-This repository contains datasets of the test instances of the 25-node network by Simchi-Levi & Berman (1988) and our constructed Irish highway network instance, developed for electric vehicle (EV) charging station location Problems (CSLP) studies.
-
-## Contents
-
-The repository includes two folders sepratedly for the 25-node network instance and the Irish highway network instance:
+This repository contains datasets of test instances of the 25-node network by Simchi-Levi & Berman (1988) and our constructed Irish highway network developed for electric vehicle (EV) charging station location Problems (CSLP) studies.
 
 1. **25-Node Network Instance** – A simplified benchmark instance often used in CSLP literature.
 2. **Irish Highway Network** – A realistic representation of Ireland's highway network constructed for solving the CSLP on Irish highway roads.
 
----
+## Contents
 
-## 📂 Repository Structure
+For each instance, the repository includes:
+  `Nodes.csv`: Data of nodes.
+  `Edges.csv`: Data of edges representing links between nodes.
+  `Network_Visualisation.pdf`: A graphical visualization of the network instance.
+  `Network_Import.py`: A Python script to import the graph-based structure for further analysis or optimization.
 
-```text
-├── 25-node network/
-│   ├── nodes_25.csv
-│   ├── edges_25.csv
-│   ├── network_visualisation_25.png
-│   └── import_25_node_network.py
+## The file format
 
-├── Irish highway network/
-│   ├── nodes_ireland.csv
-│   ├── edges_ireland.csv
-│   ├── network_visualisation_ireland.png
-│   └── import_ireland_network.py
+### 1. `Nodes.csv`
+1.1 Node: <integer>
+    The index for each node in the network.
+1.2 Latitude: <string>
+    Latitude of the node in degrees, minutes, and seconds format.
+1.3 Longitude: <string>
+    Longitude of the node in degrees, minutes, and seconds format.
+1.3 Degree: <integer>
+    The number of edges the node has in the network.
+1.4 Settlement: <string>
+    The name of the town or city close to the node.
+1.5 Population/Population weight: <integer>
+    The population represents the number of residents in the settlement, used to determine the classification of the node.
+    A alternative representation is the assigned population weight, commonly used to estimate potential EV demand or origin-destination weights.
+1.6 Classfication: <string>
+    The functional category of the node, such as "Center" that can generate and attract traveling demands or "Connection" that serves as intersections and junctions in the instance.
+    
+Note: Columns with missing data are not included in the dataset
 
+   
+
+### 2. `Edges.csv`
+2.1 Origin: <integer>
+   The index of starting node of the edge in the graph.
+2.2 Destination: <integer>
+   The index of ending node of the edge.
+2.3 Edge Length: <real>
+   The distance required to travel from the origin to the destination.
 
 
 
