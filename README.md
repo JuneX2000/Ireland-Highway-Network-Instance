@@ -67,7 +67,7 @@ This pdf file provides a visual representation of the network instance, serves a
 The edges represent undirect connections between nodes.
 
 
-### 5. `Network_Import.py`
+### 5. `Network_Import.ipynb`
 
 This Python script is used to build the graph-based structure for each test instance and import the traffic flow data file into constructed network structure.
 
